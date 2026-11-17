@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:slotbook-test;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+app:
+  timezone: UTC
+  jwt:
+    secret: test-secret-key-with-enough-length-for-hs256-signing
+    expiration-minutes: 60
+  booking:
+    cancellation-cutoff-hours: 2
